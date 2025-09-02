@@ -14,6 +14,7 @@ import java.util.Collections;
 @Setter
 @Table(name = "regions")
 public class Region {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -26,10 +27,5 @@ public class Region {
     public Set<EducationalUnit> getAllEducationalUnits() {
         if (educationalUnits == null) educationalUnits = new HashSet<>();
         return Collections.unmodifiableSet(educationalUnits);
-    }
-
-    @Override
-    public String toString() {
-        return name;
     }
 }
