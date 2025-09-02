@@ -12,3 +12,4 @@ public interface PersonalInfoRepository extends JpaRepository<PersonalInfo, Long
     Optional<PersonalInfo> findByAmka(String amka);
     Optional<PersonalInfo> findByIdentityNumber(String identityNumber);
 }
+
