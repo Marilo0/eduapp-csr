@@ -6,16 +6,14 @@ import gr.aueb.cf.eduapp.model.User;
 import jakarta.persistence.criteria.Join;
 import org.springframework.data.jpa.domain.Specification;
 
-import static java.lang.String.join;
-
-//Utility class
+// Utility Class
 public class TeacherSpecification {
 
     private TeacherSpecification() {
 
     }
 
-    public static Specification<Teacher> teacherUserVatIs(String vat){
+    public static Specification<Teacher> teacherUserVatIs(String  vat) {
         return ((root, query, criteriaBuilder) -> {
             if (vat == null || vat.isBlank())
                 return criteriaBuilder.isTrue(criteriaBuilder.literal(true));
